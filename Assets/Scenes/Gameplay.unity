@@ -19440,6 +19440,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6930386049490337470, guid: 94fff36172924f24a80e9f8b3c8306d6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6930386049490337470, guid: 94fff36172924f24a80e9f8b3c8306d6, type: 3}
       propertyPath: _walkableMask.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -19451,9 +19455,17 @@ PrefabInstance:
       propertyPath: _moveSpeed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 724118489, guid: 94fff36172924f24a80e9f8b3c8306d6, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 118455274344790554, guid: 94fff36172924f24a80e9f8b3c8306d6, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640236257349662788, guid: 94fff36172924f24a80e9f8b3c8306d6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6485591584431241129, guid: 94fff36172924f24a80e9f8b3c8306d6, type: 3}
       propertyPath: m_RootOrder

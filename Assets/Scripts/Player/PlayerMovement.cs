@@ -62,13 +62,14 @@ namespace Player
         {
             _isMoving = true;
             
-            while ((Vector2)transform.position != _endPosition)
+            while (Vector2.Distance(transform.position, _endPosition) > Mathf.Epsilon)
             {
                 transform.position = Vector3.MoveTowards(transform.position, _endPosition,
                     _playerStats.MoveSpeed * Time.fixedDeltaTime);
                 yield return null;
             }
 
+            transform.position = _endPosition;
             _isMoving = false;
         }
     }
