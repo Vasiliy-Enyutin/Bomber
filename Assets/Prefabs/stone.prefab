@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2199456618665759570}
   - component: {fileID: 4801356171544543921}
   - component: {fileID: 6280401612672298225}
-  m_Layer: 0
-  m_Name: stone
+  m_Layer: 6
+  m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,4 +120,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.1

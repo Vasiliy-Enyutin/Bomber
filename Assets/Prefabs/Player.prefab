@@ -70,8 +70,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: -4671057516089923990, guid: 99a5ac359999d1f488e14b08e012f9d8, type: 3}
+  m_SortingOrder: 15
+  m_Sprite: {fileID: -5792511334730316588, guid: 99a5ac359999d1f488e14b08e012f9d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: -6930386049490337470}
   - component: {fileID: -1970495123385385607}
   - component: {fileID: 5640236257349662788}
+  - component: {fileID: 724118496}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b89b37d4680564e87f5b1e560bf516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 5
+  _moveSpeed: 3
 --- !u!114 &5640236257349662788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,3 +213,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7e823916c34e24eb189ff089a1c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &724118496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6485591584431241131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c2b9aa838445bdbf093c4dee23d484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _unwalkableMask:
+    serializedVersion: 2
+    m_Bits: 64
+  _gridWorldSize: {x: 17, y: 9}
+  _nodeRadius: 0.5

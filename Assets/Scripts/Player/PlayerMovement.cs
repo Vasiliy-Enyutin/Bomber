@@ -1,3 +1,5 @@
+using System;
+using Pathfinding;
 using UnityEngine;
 
 namespace Player
@@ -31,6 +33,7 @@ namespace Player
 
         private void Move()
         {
+            
             _moveDirection = new Vector2(_joystick.Horizontal, _joystick.Vertical);
             // fix increase speed when walking diagonally
             if (Mathf.Sqrt(Mathf.Pow(_moveDirection.x, 2) + Mathf.Pow(_moveDirection.y, 2)) > 1)
