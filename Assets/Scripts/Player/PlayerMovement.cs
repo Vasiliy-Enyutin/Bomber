@@ -6,6 +6,7 @@ namespace Player
     [RequireComponent(typeof(PlayerStats))]
     public class PlayerMovement : MonoBehaviour
     {
+        [SerializeField] private LayerMask _unwalkableMask;
         private PlayerStats _playerStats;
         private Vector2 _endPosition;
         private bool _isMoving = false;
@@ -34,16 +35,27 @@ namespace Player
             if (_isMoving == true)
                 return;
             
+            Vector2 direction = new Vector2();
             if (swipeData.Direction == SwipeDirection.Right)
-                _endPosition = (Vector2)transform.position + Vector2.right;
+                direction = Vector2.right;
             else if (swipeData.Direction == SwipeDirection.Left)
-                _endPosition = (Vector2)transform.position + Vector2.left;
+                direction = Vector2.left;
             else if (swipeData.Direction == SwipeDirection.Up)
-                _endPosition = (Vector2)transform.position + Vector2.up;
+                direction = Vector2.up;
             else if (swipeData.Direction == SwipeDirection.Down)
-                _endPosition = (Vector2)transform.position + Vector2.down;
+                direction = Vector2.down;
 
+            _endPosition = GetEndPosition(direction);
             StartCoroutine(MoveRoutine());
+        }
+
+        private Vector2 GetEndPosition(Vector2 direction)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1f, _unwalkableMask);
+            if (hit.collider != null)
+                return transform.position;
+            
+            return (Vector2)transform.position + direction;
         }
 
         private IEnumerator MoveRoutine()
