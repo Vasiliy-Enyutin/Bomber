@@ -1,9 +1,9 @@
 using DestroyableObjects;
 using UnityEngine;
 
-namespace PlayerLogic
+namespace EnemyLogic
 {
-    public class Player : MonoBehaviour, IDestroyable
+    public class Enemy : MonoBehaviour, IDestroyable
     {
         public void Destroy()
         {

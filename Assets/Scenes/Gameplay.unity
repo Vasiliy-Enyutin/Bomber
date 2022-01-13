@@ -16826,6 +16826,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 8672624712032976913, guid: 04af2fde89665364cbc2757fcac2165c, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04af2fde89665364cbc2757fcac2165c, type: 3}
 --- !u!4 &1729862130 stripped
@@ -21219,10 +21223,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -1970495123385385607, guid: 94fff36172924f24a80e9f8b3c8306d6, type: 3}
-      propertyPath: _abilityReloadTime
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6485591584431241129, guid: 94fff36172924f24a80e9f8b3c8306d6, type: 3}
       propertyPath: m_RootOrder
       value: 3

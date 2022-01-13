@@ -25,7 +25,7 @@ namespace PlayerLogic.Bomb
         private void BlowUp()
         {
             Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
-            Destroy(gameObject, 1f);
+            Destroy(gameObject);
         }
     }
 }

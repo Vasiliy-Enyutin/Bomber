@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
+using DestroyableObjects;
 using Pathfinding;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Enemy
+namespace EnemyLogic
 {
     [RequireComponent(typeof(AIPath))]
     public class RandomPathSetter : MonoBehaviour
@@ -19,6 +21,16 @@ namespace Enemy
         {
             _path = GetComponent<AIPath>();
             _path.endReachedDistance = 0.2f;
+        }
+
+        private void OnEnable()
+        {
+            Wall.OnWallDestroy += Scan;
+        }
+
+        private void OnDisable()
+        {
+            Wall.OnWallDestroy -= Scan;
         }
 
         private void Start()
@@ -64,6 +76,11 @@ namespace Enemy
 
             Debug.Log("No tile to move");
             return Vector2.zero;
+        }
+
+        private void Scan()
+        {
+            AstarPath.active.Scan();
         }
     }
 }

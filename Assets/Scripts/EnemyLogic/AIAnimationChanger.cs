@@ -1,7 +1,7 @@
 using Pathfinding;
 using UnityEngine;
 
-namespace Enemy
+namespace EnemyLogic
 {
     [RequireComponent(typeof(Animator))]
     [RequireComponent(typeof(AIPath))]
