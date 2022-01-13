@@ -51,7 +51,7 @@ namespace Player
 
         private Vector2 GetEndPosition(Vector2 direction)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1f, _unwalkableMask);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, TileDiameterDefiner.TileDiameter, _unwalkableMask);
             if (hit.collider != null)
                 return transform.position;
             
