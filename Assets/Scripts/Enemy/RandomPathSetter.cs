@@ -6,14 +6,13 @@ using Random = UnityEngine.Random;
 namespace Enemy
 {
     [RequireComponent(typeof(AIPath))]
-    [RequireComponent(typeof(Seeker))]
     public class RandomPathSetter : MonoBehaviour
     {
         [SerializeField] private LayerMask _unwalkableLayer;
         [SerializeField] private float _cooldown;
         private GameObject[] _walkabkeTiles;
         private AIPath _path;
-        private bool isOnCooldown;
+        private bool _isOnCooldown = false;
 
 
         private void Awake()
@@ -32,7 +31,7 @@ namespace Enemy
         {
             if (_path.reachedDestination == true)
             {
-                if (isOnCooldown == false)
+                if (_isOnCooldown == false)
                 {
                     StartCoroutine(SetPathDestination());
                 }
@@ -41,9 +40,9 @@ namespace Enemy
 
         private IEnumerator SetPathDestination()
         {
-            isOnCooldown = true;
+            _isOnCooldown = true;
             yield return new WaitForSeconds(_cooldown);
-            isOnCooldown = false;
+            _isOnCooldown = false;
             _path.destination = GetRandomTileToMove();
         }
     

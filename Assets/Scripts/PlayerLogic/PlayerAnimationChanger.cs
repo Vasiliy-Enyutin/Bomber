@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Player
+namespace PlayerLogic
 {
     [RequireComponent(typeof(Animator))]
     [RequireComponent(typeof(PlayerMovement))]

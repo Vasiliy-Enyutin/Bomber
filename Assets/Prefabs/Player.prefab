@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 8
+  _abilityReloadTime: 0
 --- !u!114 &5640236257349662788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,3 +239,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd5912d160eb1847a626a86378c78b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bombPrefab: {fileID: 7675328288608911607, guid: f6a45e356162a8b498d2bf7fecdf370b, type: 3}

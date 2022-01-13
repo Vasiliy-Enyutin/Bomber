@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Player
+namespace PlayerLogic
 {
     [RequireComponent(typeof(PlayerStats))]
     public class PlayerMovement : MonoBehaviour
