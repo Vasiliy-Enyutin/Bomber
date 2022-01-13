@@ -191,7 +191,7 @@ MonoBehaviour:
   _unwalkableLayer:
     serializedVersion: 2
     m_Bits: 128
-  _cooldown: 1
+  _cooldown: 2
 --- !u!1 &1886104131729337933
 GameObject:
   m_ObjectHideFlags: 0
