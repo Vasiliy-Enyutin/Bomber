@@ -1,3 +1,5 @@
+using System;
+using EnemyLogic;
 using UnityEngine;
 
 namespace PlayerLogic
@@ -25,6 +27,11 @@ namespace PlayerLogic
             SwipeDetector.OnSwipe -= SetAnimatorValues;
         }
 
+        private void Update()
+        {
+            _animator.SetBool("IsMoving", _playerMovement.IsMoving);
+        }
+
         private void SetAnimatorValues(SwipeData swipeData)
         {
             if (_playerMovement.IsMoving == true)
@@ -34,7 +41,6 @@ namespace PlayerLogic
 
             _animator.SetFloat("Horizontal", moveDirection.x);
             _animator.SetFloat("Vertical", moveDirection.y);
-            _animator.SetFloat("Speed", moveDirection.magnitude);
         }
 
         private Vector2 GetMoveDirection(SwipeData swipeData)

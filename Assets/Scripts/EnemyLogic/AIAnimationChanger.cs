@@ -18,6 +18,7 @@ namespace EnemyLogic
 
         private void Update()
         {
+            _animator.SetBool("IsReachedDestination", _path.reachedDestination);
             SetAnimatorValues();
         }
 
@@ -27,7 +28,6 @@ namespace EnemyLogic
             
             _animator.SetFloat("Horizontal", moveDirection.x);
             _animator.SetFloat("Vertical", moveDirection.y);
-            _animator.SetFloat("Speed", moveDirection.magnitude);
         }
     }
 }

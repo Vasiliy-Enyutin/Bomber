@@ -17,6 +17,8 @@ namespace EnemyLogic
         private bool _isOnCooldown = false;
 
 
+        public bool ReachedDestinaion => _path.reachedDestination;
+        
         private void Awake()
         {
             _path = GetComponent<AIPath>();
