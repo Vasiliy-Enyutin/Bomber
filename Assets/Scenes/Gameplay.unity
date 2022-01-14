@@ -12119,6 +12119,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8611975524221889689, guid: 2ee7137ed3b09c747ae9309416b0e9f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ee7137ed3b09c747ae9309416b0e9f1, type: 3}
 --- !u!4 &1303955576 stripped
@@ -15228,6 +15232,10 @@ PrefabInstance:
     - target: {fileID: 2199456618665759568, guid: 194bb27931aff2b49872d0e480a90e1f, type: 3}
       propertyPath: m_Name
       value: Stone (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199456618665759568, guid: 194bb27931aff2b49872d0e480a90e1f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2199456618665759571, guid: 194bb27931aff2b49872d0e480a90e1f, type: 3}
       propertyPath: m_RootOrder
