@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using DestroyableObjects;
 using Pathfinding;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -27,12 +26,12 @@ namespace EnemyLogic
 
         private void OnEnable()
         {
-            Wall.OnWallDestroy += Scan;
+            SoftBlock.OnSoftBlockDestroy += Scan;
         }
 
         private void OnDisable()
         {
-            Wall.OnWallDestroy -= Scan;
+            SoftBlock.OnSoftBlockDestroy -= Scan;
         }
 
         private void Start()
@@ -82,7 +81,8 @@ namespace EnemyLogic
 
         private void Scan()
         {
-            AstarPath.active.Scan();
+            if (AstarPath.active != null)
+                AstarPath.active.Scan();
         }
     }
 }

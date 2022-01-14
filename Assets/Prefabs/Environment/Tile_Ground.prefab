@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3845292785362212553}
   - component: {fileID: 2889217265454813237}
   m_Layer: 6
-  m_Name: Tile_Grass
+  m_Name: Tile_Ground
   m_TagString: WalkableTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5441223297315994465, guid: 0b086a49f8e1ff7458614597d9e94eaa, type: 3}
+  m_Sprite: {fileID: -8392167614482142578, guid: f1f1b9fdf7eb0434ab0141156d27d32f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

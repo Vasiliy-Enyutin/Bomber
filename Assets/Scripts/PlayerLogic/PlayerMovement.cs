@@ -1,4 +1,5 @@
 using System.Collections;
+using Global;
 using UnityEngine;
 
 namespace PlayerLogic

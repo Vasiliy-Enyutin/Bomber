@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UI
 {
@@ -11,6 +12,17 @@ namespace UI
         public void OnAbilityButtonClicked()
         {
             OnAbilityButtonPressed?.Invoke();
+        }
+
+        public void OnExitButtonClicked()
+        {
+            Application.Quit();
+        }
+
+        public void OnReloadButtonClicked()
+        {
+            SceneManager.LoadScene(0);
+            Time.timeScale = 1;
         }
     }
 }
