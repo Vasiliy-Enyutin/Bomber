@@ -1,18 +1,18 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class TileDiameterDefiner : MonoBehaviour
+namespace Global
 {
-    [SerializeField] private GameObject _tile;
+    public class TileDiameterDefiner : MonoBehaviour
+    {
+        [SerializeField] private SpriteRenderer _tileSpriteRenderer;
     
     
-    public static float TileDiameter { get; private set; }
+        public static float TileDiameter { get; private set; }
 
     
-    private void Awake()
-    {
-        TileDiameter = _tile.GetComponent<SpriteRenderer>().sprite.bounds.size.x;
+        private void Awake()
+        {
+            TileDiameter = _tileSpriteRenderer.sprite.bounds.size.x;
+        }
     }
 }

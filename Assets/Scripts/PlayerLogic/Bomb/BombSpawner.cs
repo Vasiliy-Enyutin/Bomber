@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace PlayerLogic.Bomb
 {
+    [RequireComponent(typeof(PlayerStats))]
     public class BombSpawner : MonoBehaviour
     {
         [SerializeField] private GameObject _bombPrefab;

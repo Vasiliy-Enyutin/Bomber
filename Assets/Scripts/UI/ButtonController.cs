@@ -21,7 +21,7 @@ namespace UI
 
         public void OnReloadButtonClicked()
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Time.timeScale = 1;
         }
     }

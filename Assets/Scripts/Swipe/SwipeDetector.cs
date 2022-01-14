@@ -78,9 +78,25 @@ public class SwipeDetector : MonoBehaviour
         SwipeData swipeData = new SwipeData()
         {
             Direction = direction,
+            SnappingDirection = FindSnappingDirection(direction),
             StartPosition = _fingerDownPosition,
             EndPosition = _fingerUpPosition
         };
         OnSwipe?.Invoke(swipeData);
+    }
+
+    private Vector2 FindSnappingDirection(SwipeDirection direction)
+    {
+        Vector2 snappingDirection = new Vector2();
+        if (direction == SwipeDirection.Right)
+            snappingDirection = Vector2.right;
+        else if (direction == SwipeDirection.Left)
+            snappingDirection = Vector2.left;
+        else if (direction == SwipeDirection.Up)
+            snappingDirection = Vector2.up;
+        else if (direction == SwipeDirection.Down)
+            snappingDirection = Vector2.down;
+
+        return snappingDirection;
     }
 }

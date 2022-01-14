@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Global;
 using Pathfinding;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -63,20 +64,15 @@ namespace EnemyLogic
         private Vector2 GetRandomTileToMove()
         {
             RaycastHit2D hit;
+            int randomIndex;
             do
             {
-                int randomIndex = Random.Range(0, _walkabkeTiles.Length);
+                randomIndex = Random.Range(0, _walkabkeTiles.Length);
                 hit = Physics2D.CircleCast(_walkabkeTiles[randomIndex].transform.position,
                     TileDiameterDefiner.TileDiameter / 2, Vector2.zero, _unwalkableLayer);
-
-                if (hit.collider == null)
-                {
-                    return _walkabkeTiles[randomIndex].transform.position;
-                }
             } while (hit.collider != null);
-
-            Debug.Log("No tile to move");
-            return Vector2.zero;
+            
+            return _walkabkeTiles[randomIndex].transform.position;
         }
 
         private void Scan()

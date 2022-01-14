@@ -16794,7 +16794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7445ca1d8aa38d24087c6ed1afdbc52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tile: {fileID: 8611975524221889689, guid: 2ee7137ed3b09c747ae9309416b0e9f1, type: 3}
+  _tileSpriteRenderer: {fileID: 2889217265454813237, guid: 2ee7137ed3b09c747ae9309416b0e9f1, type: 3}
 --- !u!1001 &1901930144
 PrefabInstance:
   m_ObjectHideFlags: 0

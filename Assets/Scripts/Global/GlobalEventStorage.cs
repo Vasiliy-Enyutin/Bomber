@@ -1,18 +1,20 @@
 using System;
-using UnityEngine;
 
-public class GlobalEventStorage
+namespace Global
 {
-    public static event Action OnPlayerDestroy;
-    public static event Action OnEnemyDestroy;
-
-    public static void InvokePlayerDestroy()
+    public class GlobalEventStorage
     {
-        OnPlayerDestroy?.Invoke();
-    }
+        public static event Action OnPlayerDestroy;
+        public static event Action OnEnemyDestroy;
 
-    public static void InvokeEnemyDestroy()
-    {
-        OnEnemyDestroy?.Invoke();
+        public static void InvokePlayerDestroy()
+        {
+            OnPlayerDestroy?.Invoke();
+        }
+
+        public static void InvokeEnemyDestroy()
+        {
+            OnEnemyDestroy?.Invoke();
+        }
     }
 }

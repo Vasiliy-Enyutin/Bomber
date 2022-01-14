@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace PlayerLogic.Bomb
 {
+    [RequireComponent(typeof(BoxCollider2D))]
     public class Explosion : MonoBehaviour
     {
         private BoxCollider2D _collider;

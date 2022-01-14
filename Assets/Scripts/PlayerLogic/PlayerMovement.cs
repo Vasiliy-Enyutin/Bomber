@@ -35,18 +35,8 @@ namespace PlayerLogic
         {
             if (_isMoving == true)
                 return;
-            
-            Vector2 direction = new Vector2();
-            if (swipeData.Direction == SwipeDirection.Right)
-                direction = Vector2.right;
-            else if (swipeData.Direction == SwipeDirection.Left)
-                direction = Vector2.left;
-            else if (swipeData.Direction == SwipeDirection.Up)
-                direction = Vector2.up;
-            else if (swipeData.Direction == SwipeDirection.Down)
-                direction = Vector2.down;
 
-            _endPosition = GetEndPosition(direction);
+            _endPosition = GetEndPosition(swipeData.SnappingDirection);
             StartCoroutine(MoveRoutine());
         }
 

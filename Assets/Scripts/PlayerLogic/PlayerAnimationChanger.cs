@@ -37,26 +37,10 @@ namespace PlayerLogic
             if (_playerMovement.IsMoving == true)
                 return;
             
-            Vector2 moveDirection = GetMoveDirection(swipeData);
+            Vector2 moveDirection = swipeData.SnappingDirection;
 
             _animator.SetFloat("Horizontal", moveDirection.x);
             _animator.SetFloat("Vertical", moveDirection.y);
-        }
-
-        private Vector2 GetMoveDirection(SwipeData swipeData)
-        {
-            Vector2 moveDirection = new Vector2();
-            
-            if (swipeData.Direction == SwipeDirection.Right)
-                moveDirection = Vector2.right;
-            else if (swipeData.Direction == SwipeDirection.Left)
-                moveDirection = Vector2.left;
-            else if (swipeData.Direction == SwipeDirection.Up)
-                moveDirection = Vector2.up;
-            else if (swipeData.Direction == SwipeDirection.Down)
-                moveDirection = Vector2.down;
-
-            return moveDirection;
         }
     }
 }
